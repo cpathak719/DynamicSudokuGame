@@ -1,0 +1,642 @@
+<html>
+<head>
+<style id="ss"type="text/css">
+body{
+background-image:url("seo1.jpg");
+width:100%;
+height:100%;
+background-size:cover;
+margin:0;
+}
+#logg{
+text-align:center;
+}
+#logg1{
+font-size:35;
+background-color:rgba(0,0,0,.6);
+color:rgb(19, 239, 255);
+height:6%;
+width:100%;
+text-align:center;
+}
+#h{
+margin-left:30%;
+margin-top:10%;
+text-align:center;
+	color:rgb(19, 239, 255);
+	width:40%;
+	height:9%;
+	color:;
+	font-size:55;
+	font-weight:bold;
+float:;
+}
+#h1{
+padding-top:.1%;
+margin-left:30%;
+margin-top:;
+text-align:center;
+	background-color:;
+	width:40%;
+	height:5%;
+	color:rgb(254, 254, 249);
+	font-size:16;
+	font-weight:bold;
+
+}
+#m{
+border-style:solid;
+border-width:.4;
+box-shadow:5 10 20 black;
+border-color:rgb(19, 239, 255);
+paddin-top:;
+margin-left:36%;
+margin-top:;
+	background-color:rgba(0,0,0,.6);
+	width:27%;
+	height:42%;
+	color:white;
+	font-size:18;
+float:;
+}
+#iii{
+border-style:solid;
+border-width:1;
+	background-color:rgba(246, 250, 251,.1  );
+	margin-left:10%;
+	width:80%;
+	height:13%;
+	font-size:15;
+	color:rgb(19, 239, 255);
+	
+}#newiii{
+border-style:solid;
+border-color:rgb(19,239, 255);
+border-width:1;
+	background-color:rgba(246, 250, 251,.1  );
+	margin-left:10%;
+	margin-top:10%;
+	width:80%;
+	height:15%;
+	font-size:100%;
+	color:rgb(19, 239, 255);
+	
+}
+#iii1{
+	border-style:solid;
+	
+border-width:1;
+	background-color:rgba(246, 250, 251,.1  );
+	margin-left:10%;
+	width:80%;
+	height:13%;
+	font-size:15;
+	color:rgb(19, 239, 255);
+	
+}
+#newiii1{
+border-style:solid;
+border-color:rgb(19, 239, 255);
+border-width:1;
+	background-color:rgba(246, 250, 251,.1  );
+	margin-left:10%;
+	margin-top:10%;
+	width:80%;
+	height:15%;
+	font-size:100%;
+	color:rgb(19, 239, 255);
+	
+}
+#i1{
+	margin-left:10%;
+	margin-right:2%;
+	width:4%;
+	height:5%;
+	color:rgb(19, 239, 255);
+	
+	
+}
+#i2{
+	color:white;
+	text-align:center;
+	margin-right:10%;
+	padding-top:1%;
+	background-color:rgb(57, 197, 207   );
+	margin-left:14%;
+	width:18%;
+	height:10%;
+	border-style:none;
+
+	float:right;
+	
+}
+#i3{
+		
+		margin-top:10%;
+		color:white;
+		text-decoration:none;
+		font-weight:bold;
+		
+
+}
+#f1{
+
+	background-color:;
+	color:white;
+	margin-left:10%;
+
+	font-size:15;
+	
+}
+#tc{
+	text-decoration:none;
+	margin-left:10%;
+	color:rgb(19, 239, 255);
+
+}
+#put{background-color:rgb(57, 197, 207   );
+ margin-top:1%;
+ margin-left:45%;
+ width:10%;
+ height:5%;
+ border-style:none;
+ text-align:center;
+ font-size:100%;
+ color:white;
+}
+</style>
+
+<script type="text/javascript">
+
+var i0,j0,game,c,p,fname,fvalue,yy=0;
+function logl()
+{
+fname=document.getElementById("iii").value;
+fvalue=document.getElementById("iii1").value;
+document.getElementById("b").innerHTML="<div id="+"h"+">"+fname+"</div><div id="+"h1"+">Dynamic "+fvalue+"X"+fvalue+" Sudoku Game Advance  Interface </div><div id="+"m"+"><button id="+"newiii"+" onclick="+"log()"+"  >Check</button></br></br></br><button id="+"newiii1"+" onclick="+"maker()"+">Play</button></div>";
+}
+function maker()
+{
+document.getElementById("ss").innerHTML+="body{background-image:url("+"seo2.jpg"+");width:100%;height:100%;background-size:cover;margin:0;}";
+document.getElementById("b").innerHTML="<div id="+"logg1"+">Player-"+fname+" </div><div id="+"logg"+"> </div>";
+game=fvalue;
+var i,j,x=2,y=2,count=0,gcount=0,dcount=0,xpre=2,ypre=2;
+p=Math.sqrt(game);
+	c=p-1;
+	x=c;
+	y=c;
+	xpre=c;
+	ypre=c;
+	for(i=0;i<game;i++)
+	{
+			for(j=0;j<game;j++)
+			{
+				if(count!=p)
+				{
+				document.getElementById("logg").innerHTML+="<input id=s"+i+""+j+" type="+"text"+" onblur="+"insert1(this.value,"+i+","+j+","+x+","+y+")"+" id=z"+i+""+j+"></input>";
+				count++;
+				dcount++;
+				}
+				if(dcount==p)
+				{
+				document.getElementById("logg").innerHTML+=" ";
+				dcount=0;
+				}
+				if(j==game-1)
+				{
+					x=xpre;
+					y=ypre;
+					count=0;
+					gcount++;
+				}
+				if(gcount==p)
+				{
+				document.getElementById("logg").innerHTML+="</br>";
+					for(i0=0;i0<game;i0++)
+					{
+							document.getElementById("logg").innerHTML+=" ";
+					}
+					x=x+p;
+					xpre=x;
+					ypre=y;
+					gcount=0;	
+				}
+				if(count==p)
+				{
+					y=y+p;
+					count=0;
+				}
+			}
+			document.getElementById("logg").innerHTML+="</br>";
+	}
+	for(i0=0;i0<game;i0++)
+	{
+		for(j0=0;j0<game;j0++)
+		{
+				document.getElementById("ss").innerHTML+="#s"+i0+""+j0+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";			
+		}
+	}
+document.getElementById("b").innerHTML+="<button onclick="+"kk()"+" id="+"put"+">Next</button>";
+create();
+}
+function kk()
+{
+document.getElementById("ss").innerHTML+="";
+	document.getElementById("b").innerHTML="<div id="+"logg1"+">Player-"+fname+" </div><div id="+"logg"+"> </div>";
+	game=fvalue;
+	var i,j,x=2,y=2,count=0,gcount=0,dcount=0,xpre=2,ypre=2;
+	p=Math.sqrt(game);
+	c=p-1;
+	x=c;
+	y=c;
+	xpre=c;
+	ypre=c;
+	for(i=0;i<game;i++)
+	{
+			for(j=0;j<game;j++)
+			{
+				if(count!=p)
+				{
+				document.getElementById("logg").innerHTML+="<input id=s"+i+""+j+" type="+"text"+" onblur="+"insert1(this.value,"+i+","+j+","+x+","+y+")"+" id=z"+i+""+j+"></input>";
+				count++;
+				dcount++;
+				}
+				if(dcount==p)
+				{
+				document.getElementById("logg").innerHTML+=" ";
+				dcount=0;
+				}
+				if(j==game-1)
+				{
+					x=xpre;
+					y=ypre;	
+					count=0;
+					gcount++;
+				}
+				if(gcount==p)
+				{
+				document.getElementById("logg").innerHTML+="</br>";
+					for(i0=0;i0<game;i0++)
+					{
+							document.getElementById("logg").innerHTML+=" ";
+					}
+					x=x+p;
+					xpre=x;
+					ypre=y;
+					gcount=0;	
+				}
+				if(count==p)
+				{
+					y=y+p;
+					count=0;
+				}
+			}
+			document.getElementById("logg").innerHTML+="</br>";
+	}
+	for(i0=0;i0<game;i0++)
+	{
+		for(j0=0;j0<game;j0++)
+		{
+				document.getElementById("ss").innerHTML+="#s"+i0+""+j0+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";		
+		}
+	}
+	document.getElementById("b").innerHTML+="<button onclick="+"kk()"+" id="+"put"+">Next</button>";
+	create();
+}
+function create()
+{	
+	var leave=0;
+yy++;
+leave++;
+	var a=0,b1=game-1,leftcount=0,ab=0,bb,i,j,x=2,y=2,count=0,ii,jj,ccount=0,gcount=0,ggcount=0,gggcount=0,dcount=0,xpre=2,ypre=2;
+	p=Math.sqrt(game);
+	c=p-1;
+	x=c;
+	y=c;
+	xpre=c;
+	ypre=c;
+	var arr1=[1];
+	var arr2=[1];
+	var arr=[1];
+	var m=[1];
+	var left=[1];
+	for(i=0;i<game;i++)
+	{
+			arr1[i]=i+1;
+			arr[i]=arr1[i];
+	}
+	var bcount;
+	for(bb=0;bb<yy;bb++)
+	{
+	leftcount=0;
+	count=0;
+	for(i=0;i<game;i++)
+	{
+		a=0;
+		count=0;
+		gcount=0;
+		ggcount=0;
+		ab=0;
+		leave=1;
+		
+			for(j=0;j<game;j++)
+			{
+			if( leave==game-i||leave==j*i||j==leave || j==i ||j==i+i ||i+p+1==j+i )
+			{	
+			document.getElementById("s"+i+""+j).value=arr1[j];
+			}
+			else{
+			}
+			leave++;
+			m[ab]=arr1[j];
+			ab++;
+			count++;
+			if(j==game-1)
+			{
+				left[leftcount]=arr1[j];
+				leftcount++;
+				gggcount++;
+			}
+			if(gcount==c)
+			{
+				ggcount++;
+				arr2[a]=arr1[j];
+				a++;
+			}
+			if(count==p)
+			{
+				gcount++;
+				count=0;
+			}
+			if(ggcount==p)
+			{
+				var temp=a;
+				for(ii=0;ii<game-temp;ii++)
+				{
+					arr2[a]=arr1[ii];
+					a++;
+				}
+				for(ii=0;ii<game;ii++)
+				{
+					arr1[ii]=arr2[ii];
+				}
+			}
+			if(gggcount==p)
+			{
+				var tempp,aa=0,aaa=0;
+				for(ii=0;ii<game;ii++)
+				{
+					ccount++;
+					if(ccount==p)
+					{
+						tempp=arr[ii];
+						arr[aa]=tempp;
+						aa++;
+						for(jj=1;jj<p;jj++)
+						{
+							arr[aa]=arr2[jj-1];
+							aa++;
+						}
+						ccount=0;
+						aaa=0;
+					}
+					else
+					{
+					arr2[aaa]=arr[ii];
+					aaa++;
+					}
+				}
+				for(ii=0;ii<game;ii++)
+				{
+					arr1[ii]=arr[ii];
+				}
+				gggcount=0;
+				
+			}//gggcount end
+			}//j			
+	}//i
+	if(bb!=p-1)
+	{
+		for(ab=0;ab<game;ab++)
+		{
+			arr1[ab]=m[ab];
+			arr[ab]=m[ab];	
+		}
+	}
+	else{
+	
+		for(ab=0;ab<game;ab++)
+		{
+			arr1[ab]=left[ab];
+			arr[ab]=left[ab];	
+		}
+	}
+	}//bb loop close
+}
+function log()
+{
+	document.getElementById("ss").innerHTML+="";
+	document.getElementById("ss").innerHTML+="body{background-image:url("+"seo2.jpg"+");width:100%;height:100%;background-size:cover;margin:0;}";
+	game=fvalue;
+	game1=fname;
+	if(game=="" || game1=="")
+	{
+		return;
+	}
+	document.getElementById("b").innerHTML="<div id="+"logg1"+">Player-"+game1+" </div><div id="+"logg"+"> </div>";
+	var i,j,x=2,y=2,count=0,gcount=0,dcount=0,xpre=2,ypre=2;
+	p=Math.sqrt(game);
+	c=p-1;
+	x=c;
+	y=c;
+	xpre=c;
+	ypre=c;
+	for(i=0;i<game;i++)
+	{
+			for(j=0;j<game;j++)
+			{
+				if(count!=p)
+				{
+				document.getElementById("logg").innerHTML+="<input id=s"+i+""+j+" type="+"text"+" onblur="+"insert1(this.value,"+i+","+j+","+x+","+y+")"+" id=z"+i+""+j+"></input>";
+				count++;
+				dcount++;
+				}
+				if(dcount==p)
+				{
+				document.getElementById("logg").innerHTML+=" ";
+				dcount=0;
+				}
+				if(j==game-1)
+				{
+					x=xpre;
+					y=ypre;
+					count=0;
+					gcount++;
+				}
+				if(gcount==p)
+				{
+				document.getElementById("logg").innerHTML+="</br>";
+					for(i0=0;i0<game;i0++)
+					{
+							document.getElementById("logg").innerHTML+=" ";
+					}
+					x=x+p;
+					xpre=x;
+					ypre=y;
+					gcount=0;	
+				}
+				if(count==p)
+				{
+					y=y+p;
+					count=0;
+				}
+			}
+			document.getElementById("logg").innerHTML+="</br>";
+	}
+	for(i0=0;i0<game;i0++)
+	{
+		for(j0=0;j0<game;j0++)
+		{
+				document.getElementById("ss").innerHTML+="#s"+i0+""+j0+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";
+					
+		}
+	}
+}
+function insert1(a,ii,jj,ij,ji)
+{
+	//Row Checking
+	var count=0,i,j,y,yy;
+	p=Math.sqrt(game);
+	c=p-1;
+	for(i=ii;i<=ii;i++)
+	{
+			if(count!=0)
+			{
+				break;
+			}
+		for(y=0;y<game;y++)
+		{
+			if(count!=0)
+			{
+				break;
+			}
+				if(jj!=y)
+				{
+					if(a==document.getElementById("s"+i+""+y).value)
+					{
+						if(a=="")
+						{
+						count++;
+						document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";
+						break;
+						}
+						else
+						{
+						count++;
+						document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20; font-weight:bold;color:rgba(0, 0,0,.9);background-color:rgba(19, 239, 255,.6);border-color:rgba(19, 239, 255,.9); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;border-style:solid;}";
+						break;
+						}
+					}
+					else{
+					
+					document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";
+					}
+				}
+		}//y			
+	}//x	
+	
+	//Now colum Check
+	for(i=0;i<game;i++)
+	{
+		if(count!=0)
+		{
+			break;
+		}
+		for(y=jj;y<=jj;y++)
+		{
+				if(i!=ii)
+				{
+					if(a==document.getElementById("s"+i+""+y).value)
+					{
+						if(a=="")
+						{
+						count++;
+						document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";
+						break;
+						}
+						else
+						{
+						count++;
+						document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20; font-weight:bold;color:rgba(0, 0,0,.9);background-color:rgba(19, 239, 255,.6);border-color:rgba(19, 239, 255,.9); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;border-style:solid;}";
+						break;
+						}
+					
+					}
+					else{
+					
+					document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";
+					}
+				
+				}
+		}//y			
+	}//x
+	//Box Checking Start heare
+		if(count==0)
+		{
+					for(i=ij-c;i<=ij;i++)
+					{
+					if(count!=0)
+					{
+						break;
+					}				
+						for(y=ji-c;y<=ji;y++)
+						{	
+								if(i==ii && y==jj)
+								{	
+								}			
+								else
+								{
+									if(a==document.getElementById("s"+i+""+y).value)
+									{
+											if(a=="")
+											{
+											count++;
+											document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";
+											break;
+											}
+											else
+											{	
+											count++;
+											document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20;font-weight:bold;color:rgba(0, 0,0,.9);background-color:rgba(19, 239, 255,.6);border-color:rgba(19, 239, 255,.9); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;border-style:solid;}";
+											break;
+											}
+									}
+									else
+									{
+									document.getElementById("ss").innerHTML+="#s"+ii+""+jj+"{ font-size:20;color:rgb(19, 239, 255); text-align:center;margin-top:8;margin-left:8;height:7%;width:5%;background-color:rgba(246, 250, 251,.1 );border-style:solid;border-color:}";
+									}
+								}
+						}
+					}
+		}
+}
+</script>
+</head>
+<body id="b">
+<div id="h">
+Sudoku
+</div>
+<div id="h1">
+Dynamic Sudoku Game Advance Enter Style
+</div>
+<div id="m"></br></br>
+<font id="f1">UserName</font></br>
+<input id="iii"type="text" required ></br></br>
+<font id="f1">Enter value</font></br>
+<input id="iii1"type="text" required></br></br>
+<input id="i1"type="checkbox"required >I Accept All Condition
+<input id="i2" type="button"onclick="logl()" value="Enter" ></input></br></br>
+<a id="tc" href="tearm.html">Tearm&Condition</a>
+</div>
+</body>
+</html>
